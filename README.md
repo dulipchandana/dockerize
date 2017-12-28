@@ -138,6 +138,13 @@ docker node promote g113u50bs8du3wiom8b4j5xtg   ---promote worker to a manager
 
 docker service create --name <name-container> -p 8080:8080 --replicas <number_of_replications> <image-path>
 
+-------------------------docker compose command-----------------------------------
+docker-compose build weba
+docker-compose up -d
+docker-compose logs
+docker-compose ps
+docker-compose rm --all
+
 
 
 

@@ -1,0 +1,25 @@
+
+
+  core:
+    build: Core
+    ports:
+      - "8080:8080"
+    links:
+      - mongodb
+
+  mongodb:
+   image: mongo:3.0.2
+   expose:
+     - 27017
+  
+  mariadb:
+   container_name: mariadb
+   image: mariadb
+   environment:
+    MYSQL_ROOT_PASSWORD: root
+    DB_ADMIN_PASS: pass
+    MYSQL_DATABASE: opsec
+   ports:
+     - "3306:3306"
+  
+  
